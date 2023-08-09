@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-  background-color:rgba(255, 255, 255, 1);
+  background-color:rgb(253 253 253);
  
   }
 
