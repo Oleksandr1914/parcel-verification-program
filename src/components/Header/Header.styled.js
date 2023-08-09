@@ -85,10 +85,25 @@ export const HeaderLink = styled(NavLink)`
     content: '';
     position: absolute;
     bottom: -2px;
-    right: -1;
+    right: -2px;
     width: 102%;
     height: 2px;
     background-color: ${colors.main};
+  }
+
+  &:hover,
+  &:focus {
+    color: #ff0000;
+  }
+
+  &:hover span,
+  &:focus span {
+    color: #ff0000;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: #ff0000;
   }
 
   ${device.tablet} {
