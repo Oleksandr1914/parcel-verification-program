@@ -16,9 +16,15 @@ export const Container = styled.div`
   padding: 24px;
   display: flex;
   align-items: center;
+
   ${device.tablet} {
     width: ${size.tablet};
-    padding: 24px 40px;
+    padding: 26px 40px;
+  }
+
+  ${device.desktop} {
+    width: ${size.desktop};
+    padding: 18px 20px;
   }
 `;
 
@@ -71,7 +77,6 @@ export const HeaderLink = styled(NavLink)`
   &.active {
     color: ${colors.main};
     & span {
-      font-size: 20px;
       font-weight: 600;
       color: ${colors.main};
     }
@@ -89,6 +94,13 @@ export const HeaderLink = styled(NavLink)`
   ${device.tablet} {
     & span {
       display: inline-flex;
+    }
+  }
+
+  ${device.desktop} {
+    font-size: 22px;
+    & span {
+      font-size: 22px;
     }
   }
 `;
