@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
      font-weight: 400;
      font-size: 16px;
      line-height: 1.5;
@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-  background-color:rgba(255, 255, 255,1);
+  background-color:rgba(255, 255, 255, 0.87);
  
   }
 
