@@ -1,8 +1,12 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { GlobalStyle } from './globalStyles';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <>
+      <GlobalStyle />
+      <Header />
       <Routes>
         <Route index element={<div>Home</div>} />
         <Route path="/" element={<div>Home</div>} />
