@@ -1,9 +1,12 @@
+import Form from '../../components/Form/Form';
 import { BlockVerification, Container } from './Home.styled';
 
 const Home = () => {
   return (
     <Container>
-      <BlockVerification>Home</BlockVerification>
+      <BlockVerification>
+        <Form />
+      </BlockVerification>
     </Container>
   );
 };
