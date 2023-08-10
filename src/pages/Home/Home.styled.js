@@ -33,6 +33,9 @@ export const BlockVerification = styled.div`
   background-color: rgb(251 251 251);
   border-radius: 8px;
   box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+  ${device.tablet} {
+    padding-top: 20px;
+  }
   ${device.desktop} {
     width: 980px;
     padding: 30px 60px;
@@ -46,6 +49,9 @@ export const History = styled.div`
   position: absolute;
   top: 16px;
   right: 24px;
+  ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const IconHistory = styled(TbHistory)`
@@ -57,4 +63,9 @@ export const TextHisory = styled.span`
   font-size: 14px;
   line-height: 1.6;
   color: ${colors.text};
+`;
+
+export const BlockDeliveryHistory = styled.div`
+  display: flex;
+  gap: 20px;
 `;

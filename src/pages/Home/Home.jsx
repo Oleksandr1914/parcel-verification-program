@@ -1,7 +1,9 @@
 import Delivery from '../../components/Delivery/Delivery';
 import Form from '../../components/Form/Form';
+import HistoryComponent from '../../components/HistoryComponent/HistoryComponent';
 import ModalComponent from '../../components/Modal/ModalComponent';
 import {
+  BlockDeliveryHistory,
   BlockVerification,
   Container,
   History,
@@ -19,11 +21,14 @@ const Home = () => {
     <Container>
       <BlockVerification>
         <Form />
-        <Delivery />
         <History onClick={handleOpen}>
           <IconHistory />
           <TextHisory>Історія</TextHisory>
         </History>
+        <BlockDeliveryHistory>
+          <Delivery />
+          <HistoryComponent />
+        </BlockDeliveryHistory>
       </BlockVerification>
       <ModalComponent open={open} handleClose={handleClose} />
     </Container>
