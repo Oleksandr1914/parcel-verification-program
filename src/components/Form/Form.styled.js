@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/colors';
 import { device } from '../../utils/mixins';
-import { ReactComponent as Search } from '../../assets/search.svg';
+import { TbSearch } from 'react-icons/tb';
 
 export const ContainerForm = styled.form`
   display: flex;
@@ -55,15 +55,13 @@ export const Input = styled.input`
   }
 `;
 
-export const IconInput = styled(Search)`
+export const IconInput = styled(TbSearch)`
   position: absolute;
-  top: 42px;
-  left: 12px;
+  top: 40px;
+  left: 10px;
   width: 24px;
   height: 24px;
-  & path {
-    stroke: ${colors.text};
-  }
+  color: ${colors.text};
 `;
 
 export const TextError = styled.div`
