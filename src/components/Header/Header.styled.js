@@ -93,17 +93,17 @@ export const HeaderLink = styled(NavLink)`
 
   &:hover,
   &:focus {
-    color: #ff0000;
+    color: ${colors.hover};
   }
 
   &:hover span,
   &:focus span {
-    color: #ff0000;
+    color: ${colors.hover};
   }
 
   &:hover::before,
   &:focus::before {
-    background-color: #ff0000;
+    background-color: ${colors.hover};
   }
 
   ${device.tablet} {
