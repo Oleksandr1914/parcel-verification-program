@@ -10,11 +10,11 @@ export const ContainerForm = styled.form`
   ${device.tablet} {
     flex-direction: row;
     align-items: end;
-    gap: 50px;
+    gap: 100px;
   }
 
   ${device.desktop} {
-    gap: 80px;
+    gap: 160px;
   }
 `;
 
