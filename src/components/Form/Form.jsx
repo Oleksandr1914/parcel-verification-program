@@ -48,7 +48,7 @@ const Form = () => {
         ) : null}
         <IconInput />
       </InputBox>
-      <ButtonSubmit type="submit">Submit</ButtonSubmit>
+      <ButtonSubmit type="submit">Перевірити</ButtonSubmit>
     </ContainerForm>
   );
 };
