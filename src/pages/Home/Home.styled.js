@@ -4,7 +4,7 @@ import { device, size } from '../../utils/mixins';
 export const Container = styled.main`
   margin: 0 auto;
   width: ${size.mobile};
-  padding: 24px;
+  padding: 40px 24px;
   display: flex;
   align-items: center;
 
@@ -20,6 +20,9 @@ export const Container = styled.main`
 `;
 
 export const BlockVerification = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   width: 100%;
   min-height: 480px;
   padding: 15px;
