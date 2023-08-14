@@ -47,7 +47,7 @@ export const getAddressPosts = createAsyncThunk(
             CityName: data,
             CityRef: '',
             Page: '1',
-            Limit: '50',
+            Limit: '100',
             Language: 'UA',
             TypeOfWarehouseRef: '',
             WarehouseId: '',
