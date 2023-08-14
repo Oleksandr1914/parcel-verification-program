@@ -29,6 +29,7 @@ export const IconDelete = styled(TbTrash)`
   width: 22px;
   height: 22px;
   color: ${colors.main};
+  cursor: pointer;
 `;
 
 export const style = {

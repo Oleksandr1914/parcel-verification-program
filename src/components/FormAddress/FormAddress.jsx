@@ -5,14 +5,17 @@ import {
   Input,
   InputBox,
   Label,
+  LoaderContainer,
   TextError,
 } from './FormAddress.styled';
 import { useFormik } from 'formik';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import { getAddressPosts } from '../../redux/postOperation';
+import { RotatingLines } from 'react-loader-spinner';
 
 const FormAddress = () => {
+  const loading = useSelector(state => state.post.loading);
   const dispatch = useDispatch();
 
   const formik = useFormik({
@@ -22,11 +25,10 @@ const FormAddress = () => {
     validationSchema: Yup.object({
       city: Yup.string()
         .min(3, 'Мінімальна кількість символів - 3')
-        .max(20, 'Максимальна кількість символів - 20!')
-        .required('Заповніть поле!'),
+        .max(20, 'Максимальна кількість символів - 20')
+        .required('Заповніть поле'),
     }),
     onSubmit: (values, { resetForm }) => {
-      alert(JSON.stringify(values, null, 2));
       dispatch(getAddressPosts(values.city));
       resetForm();
     },
@@ -48,7 +50,19 @@ const FormAddress = () => {
         ) : null}
         <IconInput />
       </InputBox>
-      <ButtonSubmit type="submit">Пошук</ButtonSubmit>
+      {!loading ? (
+        <ButtonSubmit type="submit">Пошук</ButtonSubmit>
+      ) : (
+        <LoaderContainer>
+          <RotatingLines
+            strokeColor="#c90303"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="45"
+            visible={true}
+          />
+        </LoaderContainer>
+      )}
     </ContainerForm>
   );
 };

@@ -39,6 +39,7 @@ export const ListHistory = styled.ul`
 export const ItemHistory = styled.li`
   padding: 2px 0;
   border-bottom: 1px solid #e3e3e3;
+  cursor: pointer;
   ${device.desktop} {
     padding: 2px 8px;
   }
@@ -51,4 +52,5 @@ export const IconDelete = styled(TbTrash)`
   width: 22px;
   height: 22px;
   color: ${colors.main};
+  cursor: pointer;
 `;

@@ -28,15 +28,16 @@ export const Container = styled.div`
   }
 `;
 
+export const BlockLogo = styled(NavLink)`
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+`;
+
 export const Logotype = styled(Mail)`
   width: 48px;
   height: 48px;
   border-radius: 6px;
-`;
-
-export const BlockLogo = styled.div`
-  display: flex;
-  gap: 6px;
 `;
 
 export const TextLogo = styled.span`
