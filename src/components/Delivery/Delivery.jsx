@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Container,
   Department,
@@ -7,25 +8,31 @@ import {
   StatusKey,
   StatusValue,
 } from './Delivery.styled';
+import { useEffect } from 'react';
+import { deleteTtn } from '../../redux/postSlice';
 
 const Delivery = () => {
+  const ttnValue = useSelector(state => state.post.ttnValue);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(deleteTtn());
+  }, []);
+
   return (
     <Container>
       <StatusBox>
         <StatusKey>Статус доставки:</StatusKey>
-        <StatusValue>Одержано</StatusValue>
+        <StatusValue>{ttnValue.Status}</StatusValue>
       </StatusBox>
       <Department>
         <DepartmentKey>Відправлено:</DepartmentKey>
-        <DepartmentValue>
-          Відділення №17 (до 30 кг): вул. Розумовська, 29
-        </DepartmentValue>
+        <DepartmentValue>{ttnValue.WarehouseSender}</DepartmentValue>
       </Department>
       <Department>
         <DepartmentKey>Отримано:</DepartmentKey>
-        <DepartmentValue>
-          Відділення №13 (до 30 кг): просп. Гагаріна, 43
-        </DepartmentValue>
+        <DepartmentValue>{ttnValue.WarehouseRecipient}</DepartmentValue>
       </Department>
     </Container>
   );

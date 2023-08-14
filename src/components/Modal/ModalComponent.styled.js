@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/colors';
+import { TbTrash } from 'react-icons/tb';
 
 export const Title = styled.h2`
   text-align: center;
@@ -21,16 +22,27 @@ export const HistoryItem = styled.li`
   border-bottom: 1px solid #e3e3e3;
 `;
 
+export const IconDelete = styled(TbTrash)`
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 22px;
+  height: 22px;
+  color: ${colors.main};
+`;
+
 export const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '240px',
-  minHeight: '380px',
+  height: '380px',
   bgcolor: 'background.paper',
   borderRadius: '6px',
   boxShadow: 24,
   p: 4,
   padding: ' 20px 15px;',
+  paddingTop: '35px',
+  overflowY: 'scroll',
 };
