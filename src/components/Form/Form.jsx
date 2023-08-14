@@ -9,8 +9,12 @@ import {
 } from './Form.styled';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { getDataTtn } from '../../redux/postOperation';
 
 const Form = () => {
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       token: '',
@@ -25,8 +29,9 @@ const Form = () => {
         )
         .required('Мінімальна кількість символів - 11'),
     }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (values, { resetForm }) => {
+      dispatch(getDataTtn(values.token));
+      resetForm();
     },
   });
 
