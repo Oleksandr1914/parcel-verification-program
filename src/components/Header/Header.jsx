@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <HeaderBox>
       <Container>
-        <BlockLogo>
+        <BlockLogo to="/">
           <Logotype />
           <TextLogo>НОВА ПОШТА</TextLogo>
         </BlockLogo>

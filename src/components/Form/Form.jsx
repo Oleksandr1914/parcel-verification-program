@@ -5,14 +5,17 @@ import {
   Input,
   InputBox,
   Label,
+  LoaderContainer,
   TextError,
 } from './Form.styled';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getDataTtn } from '../../redux/postOperation';
+import { RotatingLines } from 'react-loader-spinner';
 
 const Form = () => {
+  const loading = useSelector(state => state.post.loading);
   const dispatch = useDispatch();
 
   const formik = useFormik({
@@ -53,7 +56,19 @@ const Form = () => {
         ) : null}
         <IconInput />
       </InputBox>
-      <ButtonSubmit type="submit">Перевірити</ButtonSubmit>
+      {!loading ? (
+        <ButtonSubmit type="submit">Перевірити</ButtonSubmit>
+      ) : (
+        <LoaderContainer>
+          <RotatingLines
+            strokeColor="#c90303"
+            strokeWidth="5"
+            animationDuration="0.75"
+            width="45"
+            visible={true}
+          />
+        </LoaderContainer>
+      )}
     </ContainerForm>
   );
 };

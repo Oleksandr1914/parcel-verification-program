@@ -91,3 +91,7 @@ export const ButtonSubmit = styled.button`
     width: 193px;
   }
 `;
+
+export const LoaderContainer = styled.div`
+  margin: 0 auto;
+`;
