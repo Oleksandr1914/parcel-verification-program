@@ -60,6 +60,10 @@ const postSlice = createSlice({
   },
 });
 
-export const { changeTtnValue, deleteHistoryPost, deleteTtn } =
-  postSlice.actions;
+export const {
+  changeTtnValue,
+  deleteHistoryPost,
+  deleteTtn,
+  deleteAddressPosts,
+} = postSlice.actions;
 export default postSlice.reducer;
